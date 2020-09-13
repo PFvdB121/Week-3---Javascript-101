@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<body>
+			<h1>Pizza's bestellen</h1>
+
+			<p>Hier kunt u uw pizza's bestellen. De bezorgkosten zijn €13.00. Maar als u 50 euro of meer besteed aan de pizza, zijn de bezorgkosten gratis.</p>
+			
+			<p>"Wilt u pizza's bestellen?</p> 
+			<button onclick="PizzaBestellen()">Ja</button>
+			
+			<script type="text/javascript">
+				//Naam: Patrique van den Boom
+				//opdracht: Pizza calculator
+				function PizzaBestellen() { //Vanwege function kan <button></button> met onclick="PizzaBestellen()" de data in PizzaBestellen, die tussen {} staats, oproepen.
+					var HoeveelSmall = (prompt("Hoeveel small pizza's van €5.00?")); //Met prompt() wordt er een vraag gesteld die tussen haakjes staat, en het antwoord word opgeslagen in HoeveelSmall vanwege = als opgeslagen data vanwege var, die dan later gebruikt kan gaan worden met HoeveelSmall
+					var HoeveelMedium = (prompt("Hoeveel medium pizza's van €6.50?")); //Met prompt() wordt er een vraag gesteld die tussen haakjes staat, en het antwoord word opgeslagen in HoeveelMedium vanwege = als opgeslagen data vanwege var, die dan later gebruikt kan gaan worden met HoeveelMedium					
+					var HoeveelLarge = (prompt("Hoeveel large pizza's van €8.00?")); //Met prompt() wordt er een vraag gesteld die tussen haakjes staat, en het antwoord word opgeslagen in HoeveelLarge vanwege = als opgeslagen data vanwege var, die dan later gebruikt kan gaan worden met HoeveelLarge
+					var TotaalPrijs = HoeveelSmall * 5.00 + HoeveelMedium * 6.50 + HoeveelLarge * 8.00  //Met = wordt het antwoord van de som opgeslagen in TotaalPrijs als verandelijke data vanwege var. Je kan de data dan weer oproepen met TotaalPrijs
+					document.write("Aantal small pizza's: " + HoeveelSmall + " prijs: €" + (HoeveelSmall*5.00) + "<br>Aantal medium pizza's: " + HoeveelMedium +  " prijs: €" + (HoeveelMedium*6.50) + "<br>Aantal large pizza's: " + HoeveelLarge + " prijs: €" + (HoeveelLarge*8.00) + "<br>"); //Met document.write() zet je de elementen en stukken tekst wat tussen haakjes staat in html, met + plak je de elementen en stukken tekst aan elkaar en met "<br>" plaats je een regeleinde in de tekst
+					if (TotaalPrijs < 50) {    //Met if wordt er data gebruikt als wordt voldaan aan een bepaalde conditie, in dit geval, als TotaalPrijs kleiner is dan 50, omdat tussen TotaalPrijs links en 50 rechts < staat
+						TotaalPrijs+=13   //Met += wordt 13 opgeteld bij TotaalPrijs
+						document.write("Bezorgkosten: €13.00 <br> Totaal prijs: €" + TotaalPrijs + "<br>")   //Met document.write() zet je de elementen en stukken tekst wat tussen haakjes staat in html, met + plak je de elementen en stukken tekst aan elkaar en met "<br>" plaats je een regeleinde in de tekst
+					}
+					else {    //De data in de else statement wordt gebruikt als er niet wordt voldaan aan de conditie van de if statement
+						document.write("TotaalPrijs: €" + Number(TotaalPrijs) + "<br>")   //Met document.write() zet je de elementen en stukken tekst wat tussen haakjes staat in html, met + plak je de elementen en stukken tekst aan elkaar en met "<br>" plaats je een regeleinde in de tekst
+					}
+				}
+			</script>
+		</body>
+	</head>
+</html>

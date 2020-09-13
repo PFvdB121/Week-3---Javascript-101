@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>
+			B1W3L3 - OperatorenFuncties
+	</title>
+</head>
+	<body>
+		<h3>Tafel van 3 uitvoeren</h3>
+		<button onclick="TafelVan3()">Klik hier</button>
+		<h3>Tafel van 6 uitvoeren</h3>
+		<button onclick="TafelVan6()">Klik hier</button>
+		<h3>Klik hier om de som van opdracht 3 uit te voeren:</h3>
+		<button onclick="Som()">Klik hier</button>
+		<h3>Je kan hiermee dezelfde berekening van de som hierboven uitvoeren met een getal anders dan 12:</h3>
+		<button onclick="Berekenen()">Klik hier</button>
+		<script type="text/javascript">
+			//Naam: Patrique van den Boom
+			//Opleiding: Software Development
+			function TafelVan3() {    //Met de hulp van function kan de <button></button> met onclick="TafelVan3()" de data van Tafelvan3() oproepen, die tussen {} staat
+				var Drie = prompt("Met welk getal wilt u 3 vermedigvuldigen?"); //Met prompt wordt er in een pop up een vraag gesteld, en het antwoord wordt vanwege = opgeslagen in Drie als verandelijke data vanwege var, die je dan kan gaan gebruiken zolang je Drie niet tussen '' of "" zet.
+				Drie*=3 //Met *= wordt het element Drie vemedigvuldigt met 63
+				alert(Drie); //met alert wordt het element Drie getoont in een pop up
+			}
+			function TafelVan6() {    //Met de hulp van function kan de <button></button> met onclick="TafelVan6()" de data van Tafelvan3() oproepen, die tussen {} staat
+				var Zes = prompt("Met welk getal wilt u 6 vemedigvuldigen?"); //Met prompt wordt er in een pop up een vraag gesteld, en het antwoord wordt vanwege = opgeslagen in Zes als verandelijke data vanwege var, die je dan kan gaan gebruiken zolang je Zes niet tussen '' of "" zet.
+				Zes*=6 //Met *= wordt het element Zes vemedigvuldigt met 6
+				alert(Zes); //met alert wordt het element Zes getoont in een pop up
+			}
+			function Som() {    //Met de hulp van function kan de <button></button> met onclick="Som()" de data van Tafelvan3() oproepen, die tussen {} staat
+				var RekenSom = 12  //Met = word 12 opgeslagen in RekenSom als verandelijke data vanwege var
+				RekenSom+=6   //Vanwege += wordt 6 opgeteld bij RekenSom
+				alert("12+6=" + RekenSom);   //Met alert() wordt wat er tussen haakjes staat in een pop up getoont, vanwege "" wordt wat daar er tussen staat tekst in de pop up en vanwege + wordt de data in RekenSom daarbij toegevoegt.
+				RekenSom*=10
+				alert("18*10=" + RekenSom);   //Met alert() wordt wat er tussen haakjes staat in een pop up getoont, vanwege "" wordt wat daar er tussen staat tekst in de pop up en vanwege + wordt de data in RekenSom daarbij toegevoegt.
+				RekenSom/=5
+				alert("180/5=" + RekenSom);   //Met alert() wordt wat er tussen haakjes staat in een pop up getoont, vanwege "" wordt wat daar er tussen staat tekst in de pop up en vanwege + wordt de data in RekenSom daarbij toegevoegt.
+				RekenSom-=12
+				alert("36-12=" + RekenSom);   //Met alert() wordt wat er tussen haakjes staat in een pop up getoont, vanwege "" wordt wat daar er tussen staat tekst in de pop up en vanwege + wordt de data in RekenSom daarbij toegevoegt.
+			}
+			function Berekenen() {    //Met de hulp van function kan de <button></button> met onclick="Berekenen()" de data van Tafelvan3() oproepen, die tussen {} staat
+				var BeginGetal = prompt("Met welk getal wil je de berekening maken?")  //Met prompt wordt er in een pop up een vraag gesteld, en het antwoord wordt vanwege = opgeslagen in BeginGetal als verandelijke data vanwege var, die je dan kan gaan gebruiken zolang je BeginGetal niet tussen '' of "" zet.
+				var Berekening = (BeginGetal+6)*10/5-12   //Vanwege = wordt het antwoord van de som opgeslagen in Berekening als verandelijke data vanwege var
+				alert("(" + BeginGetal + "+6)*10/5-12=" + Berekening);   //met alert () wordt wat er tussen haakjes getoont in een pop up, en met + worden de verschillende elementen erin samengevoegd in tekst
+			} 
+		</script>
+	</body>
+</html>
